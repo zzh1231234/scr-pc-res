@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>涉密电脑预约系统</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>涉密电脑预约系统</h1>
+
+    <form id="bookingForm">
+        <label for="computerNumber">电脑编号 (1-9):</label>
+        <select id="computerNumber">
+            <option value="">请选择</option>
+            <option value="1 (广联达)">1 (广联达)</option>
+            <option value="2 (广联达)">2 (广联达)</option>
+            <option value="3 (广联达)">3 (广联达)</option>
+            <option value="4 (广联达)">4 (广联达)</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+
+        <label for="date">使用日期:</label>
+        <input type="date" id="date">
+
+        <label for="timeSlot">使用时间:</label>
+        <select id="timeSlot">
+            <option value="">请选择</option>
+            <option value="上午">上午</option>
+            <option value="下午">下午</option>
+            <option value="全天">全天</option>
+        </select>
+
+        <label for="projectCode">项目编号:</label>
+        <input type="text" id="projectCode">
+
+        <label for="reviewer">评审人员:</label>
+        <input type="text" id="reviewer">
+
+        <label for="projectManager">项目主管人员:</label>
+        <input type="text" id="projectManager">
+
+        <button type="submit">预约</button>
+    </form>
+
+    <h2>预约记录</h2>
+    <table id="bookingTable">
+        <thead>
+            <tr>
+                <th>电脑编号</th>
+                <th>使用日期</th>
+                <th>使用时间</th>
+                <th>项目编号</th>
+                <th>评审人员</th>
+                <th>项目主管人员</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Bookings will be displayed here -->
+        </tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+</html>
